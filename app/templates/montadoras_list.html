@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>PatroCars - Montadoras</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/static/image/carro.png" alt="Logo PatroCars" class="logo">
+            <span class="system-name">PatroCars</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/montadora/list">Montadoras</a></li>
+                <li><a href="/modelo/list">Modelos</a></li>
+                <li><a href="/veiculo/list">Veículos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="/montadora/form">Adicionar Montadora</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>País</th>
+                <th>Ano Fundação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for montadora in montadoras %}
+            <tr>
+                <td>{{ montadora.id }}</td>
+                <td>{{ montadora.nome }}</td>
+                <td>{{ montadora.pais }}</td>
+                <td>{{ montadora.ano_fundacao }}</td>
+                <td>
+                    <form action="/montadora/form/{{ montadora.id }}" method="get" style="display:inline;">
+                        <button type="submit" class="edit-button">Editar</button>
+                    </form>
+                    <form action="/montadora/delete/{{ montadora.id }}" method="post" style="display:inline;">
+                        <button type="submit" class="delete-button" onclick="return confirm('Deseja realmente excluir esta Montadora?');">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>      
+    </table>
+</body>
+</html>

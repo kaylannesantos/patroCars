@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>PatroCars - Modelos Veículos</title>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/static/image/carro.png" alt="Logo PatroCars" class="logo">
+            <span class="system-name">PatroCars</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/montadora/list">Montadoras</a></li>
+                <li><a href="/modelo/list">Modelos</a></li>
+                <li><a href="/veiculo/list">Veículos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="/modelo/form">Adicionar Modelo de Veículo</a>  
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Montadora</th>
+                <th>Valor</th>
+                <th>Motorização</th>
+                <th>Turbo</th>
+                <th>Automático</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for modelo in modelos %}
+            <tr>
+                <td>{{ modelo.id }}</td>
+                <td>{{ modelo.nome }}</td>
+                <td>{{ modelo.montadora }}</td>
+                <td>{{ modelo.valor_referencia }}</td>
+                <td>{{ modelo.motorizacao }}</td>
+                <td>{{"Sim" if modelo.turbo else "Não"}}</td>
+                <td>{{ "Sim" if modelo.automatico else "Não"}}</td>
+                <td>
+                    <form action="/modelo/form/{{ modelo.id }}" method="get" style="display: inline;">
+                        <button type="submit" class="edit-button">Editar</button>
+                    </form>
+                    <form action="/modelo/delete/{{ modelo.id }}" method="post" style="display:inline;">
+                        <button type="submit" class="delete-button" onclick="return confirm('Deseja realmente excluir este modelo?');">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>      
+    </table>
+</body>
+</html>
