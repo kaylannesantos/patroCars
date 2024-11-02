@@ -6,7 +6,7 @@ from .routes import montadora, modelo, veiculo
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="./static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory='app/templates')
 
