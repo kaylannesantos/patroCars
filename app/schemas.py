@@ -9,7 +9,7 @@ class ModeloVeiculoSchema(BaseModel):
     nome: str
     montadora_id: str
     valor_referencia: int
-    motorizacao: int
+    motorizacao: str
     turbo: bool
     automatico: bool
 
