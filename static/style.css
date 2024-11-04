@@ -1,11 +1,22 @@
+@font-face {
+    font-family: "GEOspeed";
+    src: url("https://db.onlinewebfonts.com/t/109b43c4a969c686676ff4bfa12b6e1e.eot");
+    src: url("https://db.onlinewebfonts.com/t/109b43c4a969c686676ff4bfa12b6e1e.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/109b43c4a969c686676ff4bfa12b6e1e.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/109b43c4a969c686676ff4bfa12b6e1e.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/109b43c4a969c686676ff4bfa12b6e1e.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/109b43c4a969c686676ff4bfa12b6e1e.svg#GEOspeed")format("svg");
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 body {
-    font-family: 'Montserrat', sans-serif;    
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4; /* Esta cor ainda será usada se a imagem não carregar */
@@ -62,6 +73,12 @@ header {
 .system-name {
     font-size: 1.5em;
     font-weight: bold;
+}
+
+.system-name {
+    font-size: 1.5em; /* Tamanho da fonte */
+    font-weight: normal; /* Peso da fonte */
+    font-family: "GEOspeed"; /* Adicionando a nova fonte */
 }
 
 /* Menu */
