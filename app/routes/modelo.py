@@ -18,8 +18,8 @@ async def create_modelo(
     request: Request,
     nome: str = Form(...),
     montadora_id: str = Form(...),
-    valor_referencia: int = Form(...),
-    motorizacao: int = Form(...),
+    valor_referencia: float = Form(...),
+    motorizacao: str = Form(...),
     turbo: bool = Form(False),
     automatico: bool = Form(False)
 ):
@@ -31,8 +31,8 @@ async def update_modelo(
     id:str,
     nome: str = Form(...),
     montadora_id: str = Form(...),
-    valor_referencia: int = Form(...),
-    motorizacao: int = Form(...),
+    valor_referencia: float = Form(...),
+    motorizacao: str = Form(...),
     turbo: bool = Form(False),
     automatico: bool = Form(False)):
 

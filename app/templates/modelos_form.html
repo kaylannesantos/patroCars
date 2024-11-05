@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="/static/image/car_11376485.png" alt="Logo PatroCars" class="logo">
+            <!--<img src="/static/image/car_11376485.png" alt="Logo PatroCars" class="logo">-->
             <span class="system-name">PatroCars</span>
         </div>
         <nav>
@@ -39,10 +39,10 @@
         </select>
         <br>
         <label for="valor_referencia">Valor:</label>
-        <input type="number" id="valor_referencia" name="valor_referencia" value="{{ modelo.valor_referencia if modelo else '' }}" required>
+        <input type="number" id="valor_referencia" name="valor_referencia" step="0.01" value="{{ modelo.valor_referencia if modelo else '' }}" required>
         <br>
         <label for="motorizacao">Motorização:</label>
-        <input type="number" id="motorizacao" name="motorizacao" value="{{ modelo.motorizacao if modelo else '' }}" required>
+        <input type="text" id="motorizacao" name="motorizacao" value="{{ modelo.motorizacao if modelo else '' }}" required>
         <br>
         <div class="checkbox-container">
             <label for="turbo">Turbo:</label>

@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="/static/image/car_11376485.png" alt="Logo PatroCars" class="logo">
+            <!--<img src="/static/image/car_11376485.png" alt="Logo PatroCars" class="logo">-->
             <span class="system-name">PatroCars</span>
         </div>
         <nav>
@@ -44,7 +44,7 @@
                 <td>{{ veiculo.cor }}</td>
                 <td>{{ veiculo.ano_fabricacao }}</td>
                 <td>{{ veiculo.ano_modelo }}</td>
-                <td>{{ veiculo.valor }}</td>
+                <td>R$ {{ veiculo.valor | round(2) }}</td>
                 <td>{{ veiculo.placa }}</td>
                 <td>{{ "Sim" if veiculo.vendido else "Não"}}</td>
                 <td>

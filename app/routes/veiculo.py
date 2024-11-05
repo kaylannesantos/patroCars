@@ -19,7 +19,7 @@ async def create_veiculo(
     cor: str = Form(...),
     ano_fabricacao: int = Form(...), 
     ano_modelo: int = Form(...),
-    valor: int = Form(...),
+    valor: float = Form(...),
     placa: str = Form(...), 
     vendido: bool = Form(False)):
 
@@ -35,7 +35,7 @@ async def update_veiculo(
     cor: str = Form(...),
     ano_fabricacao: int = Form(...),
     ano_modelo: int = Form(...),
-    valor: int = Form(...),
+    valor: float = Form(...),
     placa: str = Form(...),
     vendido: bool = Form(False)
 ):

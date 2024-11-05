@@ -8,7 +8,7 @@ class Montadora:
         self.ano_fundacao = ano_fundacao
 
 class ModeloVeiculo: 
-    def __init__(self, nome: str ,montadora_id: str, valor_referencia: int, motorizacao: int, turbo: bool, automatico: bool):
+    def __init__(self, nome: str ,montadora_id: str, valor_referencia: float, motorizacao: str, turbo: bool, automatico: bool):
         self.id = str(ULID())
         self.nome = nome
         self.montadora_id = montadora_id
@@ -18,7 +18,7 @@ class ModeloVeiculo:
         self.automatico = automatico
 
 class Veiculo:
-    def __init__(self, modelo_id: str, cor: str, ano_fabricacao: int, ano_modelo: int, valor: int, placa: str, vendido: bool):
+    def __init__(self, modelo_id: str, cor: str, ano_fabricacao: int, ano_modelo: int, valor: float, placa: str, vendido: bool):
         self.id = str(ULID())
         self.modelo_id = modelo_id
         self.cor = cor
