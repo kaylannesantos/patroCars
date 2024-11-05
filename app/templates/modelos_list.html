@@ -38,12 +38,12 @@
             {% for modelo in modelos %}
             <tr>
                 <!--<td>{{ modelo.id }}</td>-->
-                <td>{{ modelo.nome }}</td>
-                <td>{{ modelo.montadora }}</td>
-                <td>R$ {{ modelo.valor_referencia }}</td>
-                <td>{{ modelo.motorizacao }}</td>
-                <td>{{"Sim" if modelo.turbo else "Não"}}</td>
-                <td>{{ "Sim" if modelo.automatico else "Não"}}</td>
+                <td data-label="nome">{{ modelo.nome }}</td>
+                <td data-label="montadora">{{ modelo.montadora }}</td>
+                <td data-label="valor_referencia">R$ {{ modelo.valor_referencia }}</td>
+                <td data-label="motorizacao">{{ modelo.motorizacao }}</td>
+                <td data-label="turbo">{{"Sim" if modelo.turbo else "Não"}}</td>
+                <td data-label="automatico">{{ "Sim" if modelo.automatico else "Não"}}</td>
                 <td>
                     <form action="/modelo/form/{{ modelo.id }}" method="get" style="display: inline;">
                         <button type="submit" class="edit-button">Editar</button>

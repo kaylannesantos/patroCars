@@ -35,10 +35,10 @@
         <tbody>
             {% for montadora in montadoras %}
             <tr>
-                <td>{{ montadora.id }}</td>
-                <td>{{ montadora.nome }}</td>
-                <td>{{ montadora.pais }}</td>
-                <td>{{ montadora.ano_fundacao }}</td>
+                <td data-label="id">{{ montadora.id }}</td>
+                <td data-label="nome">{{ montadora.nome }}</td>
+                <td data-label="pais">{{ montadora.pais }}</td>
+                <td data-label="fundacao">{{ montadora.ano_fundacao }}</td>
                 <td>
                     <form action="/montadora/form/{{ montadora.id }}" method="get" style="display:inline;">
                         <button type="submit" class="edit-button">Editar</button>

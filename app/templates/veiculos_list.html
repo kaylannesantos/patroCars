@@ -40,13 +40,13 @@
             {% for veiculo in veiculos %}
             <tr>
                 <!--<td>{{ veiculo.id }}</td>-->
-                <td>{{ veiculo.modelo }}</td>
-                <td>{{ veiculo.cor }}</td>
-                <td>{{ veiculo.ano_fabricacao }}</td>
-                <td>{{ veiculo.ano_modelo }}</td>
-                <td>R$ {{ veiculo.valor | round(2) }}</td>
-                <td>{{ veiculo.placa }}</td>
-                <td>{{ "Sim" if veiculo.vendido else "Não"}}</td>
+                <td data-label="modelo">{{ veiculo.modelo }}</td>
+                <td data-label="cor">{{ veiculo.cor }}</td>
+                <td data-label="ano_fabricacao">{{ veiculo.ano_fabricacao }}</td>
+                <td data-label="ano_modelo">{{ veiculo.ano_modelo }}</td>
+                <td data-label="valor">R$ {{ veiculo.valor | round(2) }}</td>
+                <td data-label="placa">{{ veiculo.placa }}</td>
+                <td data-label="vendido">{{ "Sim" if veiculo.vendido else "Não"}}</td>
                 <td>
                     <form action="/veiculo/form/{{ veiculo.id }}" method="get"  style="display: inline;">
                         <button type="submit" class="edit-button">Editar</button>
