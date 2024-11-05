@@ -165,6 +165,11 @@ button, .create-button, .delete-button {
     background-color: #e74c3c;
 }
 
+table td:last-child {
+    width: 300px; /* Ajuste o valor conforme necessário */
+    padding: 10px; /* Reduz o padding para economizar espaço */
+}
+
 /* Estilo dos botões */
 .edit-button, .delete-button {
     display: inline-block; /*Impede que os botões ocupem toda a largura */
