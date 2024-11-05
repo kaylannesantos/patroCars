@@ -91,3 +91,25 @@ Siga os passos abaixo para configurar o ambiente e instalar as dependências nec
 6. **Inicie o servidor FastAPI**:
     ```bash
     uvicorn app.main:app --reload
+
+
+## PatroCars
+
+- Tela Inicial
+![Tela Inicial](static/image/telaInicial.png)
+
+- Montadoras
+![montadoras](static/image/listMontadoras.JPG)
+
+- Modelos
+![modelos](static/image/listModelos.JPG)
+
+- Veiculos 
+![veiculos](static/image/listVeiculos.JPG)
+
+- Adicionar Montadora 
+![add-montadora](static/image/add-montadora.JPG)
+
+- Deletar Montadora 
+![delete-montadora](static/image/delete-montadora.JPG)
+
