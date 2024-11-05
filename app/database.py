@@ -9,6 +9,6 @@ import os
 import psycopg2
 
 def get_db_connection():
-    database_url = os.getenv("postgres://userpostgres:hBK90sYkdDFXdFEYjsHfuGC2KQzuA3OF@dpg-cskm3jm8ii6s73ftdvtg-a:5432/patrocars_oxal")
+    database_url = os.getenv("postgresql://userpostgres:hBK90sYkdDFXdFEYjsHfuGC2KQzuA3OF@dpg-cskm3jm8ii6s73ftdvtg-a/patrocars_oxal")
     banco = psycopg2.connect(database_url)
     return banco
