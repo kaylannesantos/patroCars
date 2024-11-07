@@ -5,7 +5,7 @@
 ```
 pg_dump -U nomeusuario -h localhost -p 5432 -d nomebanco -f "c:\caminho\para\o\arquivo\database.sql"
 ```
-2. Digite a senha
+2. Digite a senha e após salvar o arquivo, modifique-o para que mantenha uma estrutura **CREATE**.
 
 3. Importar o arquivo.sql para o banco de dados na plataforma (lembre-se de já ter criado o banco de dados primeiro na render,pois irá precisar das informações criadas no 'external database url'), usando o comando **psql**:
 ```
