@@ -1,22 +1,25 @@
-##CONFIGURAÇÃO PARA CONEXÃO DO BANCO DE DADOS
+## CONFIGURAÇÃO PARA CONEXÃO DO BANCO DE DADOS
 
-1. Abrir o prompt e digitar comando de exportação usando o comando pg_dump:
+### Criação do banco dados na plataforma
+1. Abrir o prompt e digitar comando de exportação usando o comando **pg_dump**:
+```
 pg_dump -U nomeusuario -h localhost -p 5432 -d nomebanco -f "c:\caminho\para\o\arquivo\database.sql"
-
+```
 2. Digite a senha
 
-3. Importar o arquivo.sql para o banco de dados na plataforma (lembre-se de já ter criado o banco de dados primeiro na render,
-pois irá precisar das informações criadas no 'external database url'), usando o comando psql
+3. Importar o arquivo.sql para o banco de dados na plataforma (lembre-se de já ter criado o banco de dados primeiro na render,pois irá precisar das informações criadas no 'external database url'), usando o comando **psql**:
+```
 psql -h <host_do_render> -U <usuario_do_render> -d <banco_de_dados_no_render> -f "c:\caminho\para\o\arquivo.sql"
+```
 
 4. Digite a senha
 
----
-DEPLOY
+### Deploy do sistema
 
 1. Depois de fazer a importação insira a URL external e ponha na variavel de ambiente no momento do deploy do sistema, ex:
+```
 postgresql://usuario:password@host-name/nome-do-banco
-
+```
 2. Altere o seu arquivo database de coneção com o banco local, para que ele possa usar a variavel de ambiente. Exemplo em python:
 ```python
 import psycopg2
