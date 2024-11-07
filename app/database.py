@@ -4,7 +4,7 @@ import os
 def get_db_connection():
     database_url = os.getenv("DATABASE_URL")  # configure a variavel de ambiente como DATABASE_URL
     if not database_url:
-        raise ValueError("DATABASE_URL Conexão com banco de dados estabelecida!.")
+        raise ValueError("Conexão com banco de dados não estabelecida!.")
     banco = psycopg2.connect(database_url)
     return banco
 
