@@ -1,8 +1,5 @@
-psql -h dpg-csmamfjqf0us73fvbs10-a.ohio-postgres.render.com -U userpostgre -d patrocars_z8n0 -f C:\dbpatrocars.sql
+##CONFIGURAÇÃO PARA CONEXÃO DO BANCO DE DADOS
 
-postgresql://:lfxFlRe6L2bYmEA5jnwGBteTVX3M4vqy@/
-
-CONFIGURAÇÃO PARA CONEXÃO DO BANCO DE DADOS
 1. Abrir o prompt e digitar comando de exportação usando o comando pg_dump:
 pg_dump -U nomeusuario -h localhost -p 5432 -d nomebanco -f "c:\caminho\para\o\arquivo\database.sql"
 
