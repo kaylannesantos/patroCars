@@ -19,7 +19,7 @@ app.include_router(veiculo.router, prefix='/veiculo')
 async def read_root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-@app.get("/test_db_connection")
+@app.get("/test_db_connection")#verificar conexão com o banco
 def test_db_connection():
     try:
         connection = get_db_connection()
