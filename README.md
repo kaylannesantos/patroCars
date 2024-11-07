@@ -1,4 +1,4 @@
-# Primeiro Mini Projeto - Montadora de Veículos (PatroCars)
+# Mini Projeto - Montadora de Veículos (PatroCars)
 
 ## Sobre
 
@@ -70,8 +70,8 @@ Siga os passos abaixo para configurar o ambiente e instalar as dependências nec
         id VARCHAR PRIMARY KEY,
         nome VARCHAR(255) NOT NULL,
         montadora_id VARCHAR REFERENCES montadoras(id) ON DELETE CASCADE,
-        valor_referencia NUMERIC NOT NULL,
-        motorizacao NUMERIC NOT NULL,
+        valor_referencia REAL NOT NULL,
+        motorizacao VARCHAR NOT NULL,
         turbo BOOLEAN NOT NULL,
         automatico BOOLEAN NOT NULL
     );
@@ -82,7 +82,7 @@ Siga os passos abaixo para configurar o ambiente e instalar as dependências nec
         cor VARCHAR(50) NOT NULL,
         ano_fabricacao INT NOT NULL,
         ano_modelo INT NOT NULL,
-        valor NUMERIC NOT NULL,
+        valor REAL NOT NULL,
         placa VARCHAR(20) NOT NULL UNIQUE,
         vendido BOOLEAN NOT NULL DEFAULT FALSE
     );
@@ -91,25 +91,4 @@ Siga os passos abaixo para configurar o ambiente e instalar as dependências nec
 6. **Inicie o servidor FastAPI**:
     ```bash
     uvicorn app.main:app --reload
-
-
-## Telas
-
-- Tela Inicial
-![Tela Inicial](static/image/telaInicial.png)
-
-- Montadoras
-![montadoras](static/image/listMontadoras.JPG)
-
-- Modelos
-![modelos](static/image/listModelos.JPG)
-
-- Veiculos 
-![veiculos](static/image/listVeiculos.JPG)
-
-- Adicionar Montadora 
-![add-montadora](static/image/add-montadora.JPG)
-
-- Deletar Montadora 
-![delete-montadora](static/image/delete-montadora.JPG)
 
