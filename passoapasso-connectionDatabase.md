@@ -20,6 +20,10 @@ psql -h <host_do_render> -U <usuario_do_render> -d <banco_de_dados_no_render> -f
 ```
 postgresql://usuario:password@host-name/nome-do-banco
 ```
+Ou
+```
+psql "host=<host_render> port=<porta_render> dbname=<nome_banco_render> user=<usuario_render> password=<senha_render> sslmode=require" < "C:\caminho\para\seu_arquivo.sql"
+```
 2. Altere o seu arquivo database de coneção com o banco local, para que ele possa usar a variavel de ambiente. Exemplo em python:
 ```python
 import psycopg2
