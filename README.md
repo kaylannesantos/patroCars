@@ -2,7 +2,7 @@
 
 ## Sobre
 
-O projeto **Montadora de Veículos** é um sistema web CRUD básico desenvolvido com **FastAPI** e **PostgreSQL**. O sistema permite o gerenciamento de montadoras e veículos associados, oferecendo funcionalidades para adicionar, listar, editar e remover montadoras e veículos.
+O projeto **Montadora de Veículos** é um sistema web CRUD básico desenvolvido com **FastAPI** e **PostgreSQL**. O sistema permite o gerenciamento de montadoras, modelos e veículos associados, oferecendo funcionalidades para adicionar, listar, editar e remover montadoras e veículos.
 
 ## Funcionalidades
 
@@ -91,4 +91,8 @@ Siga os passos abaixo para configurar o ambiente e instalar as dependências nec
 6. **Inicie o servidor FastAPI**:
     ```bash
     uvicorn app.main:app --reload
+
+## Acesse 
+    ```bash
+    https://patrocars.onrender.com/
 
