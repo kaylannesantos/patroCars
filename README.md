@@ -93,5 +93,5 @@ Siga os passos abaixo para configurar o ambiente e instalar as dependências nec
     uvicorn app.main:app --reload
 
 ## Acesse 
-    [patroCars](https://patrocars.onrender.com/)
+    [patroCars](https://patrocars.onrender.com)
 
